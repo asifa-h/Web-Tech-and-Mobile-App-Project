@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Villupuram</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about {
+            background: white;
+            padding: 15px;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: 5% auto;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 35px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center; background-color:#00b894; color:white;">
+        EXPLORE VILLUPURAM 🏞️
+    </h1>
+
+    <div class="about">
+        <p>
+            Villupuram is a major district in Tamil Nadu, known for its agriculture,
+            educational institutions, and strong road and rail connectivity.
+        </p>
+    </div>
+
+    <h2>Location Map</h2>
+
+    <center>
+        <iframe
+            src="https://www.google.com/maps?q=villupuram&output=embed"
+            width="600"
+            height="400"
+            style="border:4px solid black;"
+            loading="lazy">
+        </iframe>
+    </center>
+
+    <h2>Villupuram District Map</h2>
+
+    <center>
+        <img src="villupuram-map.jpg"
+             width="300"
+             class="zone-map"
+             alt="Villupuram District Map"
+             onclick="openModal()">
+        <p style="font-size:14px; color:#555;">Click the map to view in full screen</p>
+    </center>
+
+    <div id="mapModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img src="villupuram-map.jpg" alt="Villupuram Full Map">
+    </div>
+
+    <h2>Learn More (Frame)</h2>
+
+    <iframe
+        src="https://en.wikipedia.org/wiki/Villupuram"
+        width="100%"
+        height="300">
+    </iframe>
+
+    <div class="footer">
+        <p>Contact: 1234567890</p>
+        <p>Email: sample@gmail.com</p>
+        <a href="https://www.google.com/search?q=villupuram" target="_blank">Google</a> |
+        <a href="https://en.wikipedia.org/wiki/Villupuram" target="_blank">Wikipedia</a>
+        <p>© Villupuram Guide 2026</p>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("mapModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("mapModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+
+
